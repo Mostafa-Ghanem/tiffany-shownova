@@ -143,6 +143,27 @@ nav{height:72px}.logo{font-size:24px}.menu{display:block}
 }
 @media(max-width:430px){.amenities{grid-template-columns:1fr}.amenity{padding:20px 25px}.amenity h3{margin-top:14px}.fact-grid{grid-template-columns:repeat(3,1fr)}.hero-lead{font-size:23px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* Direct, verified developer contact */
+.inquiry{background:linear-gradient(135deg,#083d3c 0%,#052d2d 70%,#031f20 100%);color:#fff;padding:clamp(78px,9vw,145px) 0;position:relative;overflow:hidden}
+.inquiry:before{content:"";position:absolute;width:470px;height:470px;border:1px solid rgba(146,237,230,.14);border-radius:50%;inset-inline-end:-230px;top:-140px;pointer-events:none}
+.inquiry-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(35px,7vw,110px);align-items:center}
+.inquiry .section-title{color:#fff;margin:20px 0}
+.inquiry .section-title em{color:#8bebe5}
+.inquiry-desc{color:rgba(255,255,255,.70);max-width:55ch;font-size:15px;line-height:2}
+.inquiry-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.inquiry-actions a{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:54px;border-radius:3px;padding:14px 24px;font-weight:800;font-size:13px;transition:background .2s,border-color .2s}
+.inquiry-actions .call{background:#0abab5;color:#042b2b}
+.inquiry-actions .call:hover{background:#92eae5}
+.inquiry-actions .mail{border:1px solid rgba(255,255,255,.38);color:white}
+.inquiry-actions .mail:hover{border-color:#0abab5}
+.inquiry-card{border:1px solid rgba(255,255,255,.18);padding:clamp(24px,4vw,50px);background:rgba(255,255,255,.045);backdrop-filter:blur(6px)}
+.inquiry-card small{font:700 10px 'Manrope',sans-serif;letter-spacing:.2em;color:#7dddd6}
+.inquiry-line{display:block;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.15);font:650 clamp(15px,1.7vw,21px) 'Manrope',sans-serif;direction:ltr;text-align:start;overflow-wrap:anywhere}
+.inquiry-line:hover{color:#80ebe2}
+.inquiry-note{font-size:12px;color:rgba(255,255,255,.53);line-height:1.95;margin-top:21px}
+@media(max-width:820px){.inquiry-grid{grid-template-columns:1fr}.inquiry-card{max-width:none}.inquiry{padding:78px 0}}
+@media(max-width:430px){.inquiry-actions a{width:100%}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Residence","name":"Tiffany Villa – Katameya Heights","description":"Real estate villa project in Katameya Heights, New Cairo, Egypt. Historical project material; current availability unconfirmed.","address":{"@type":"PostalAddress","addressLocality":"New Cairo","addressRegion":"Cairo","addressCountry":"EG"},"image":"https://tiffany-shownova.vercel.app/assets/001.jpg"}</script>
 </head>
@@ -156,7 +177,7 @@ nav{height:72px}.logo{font-size:24px}.menu{display:block}
 <a href="#gallery" data-ar="التصميمات" data-en="RESIDENCES">التصميمات</a>
 <a href="#amenities" data-ar="المميزات" data-en="LIFESTYLE">المميزات</a>
 <a href="#location" data-ar="الموقع" data-en="LOCATION">الموقع</a>
-<a href="#developer" data-ar="المطور" data-en="DEVELOPER">المطور</a>
+<a href="#developer" data-ar="المطور" data-en="DEVELOPER">المطور</a><a href="#inquiry" data-ar="تواصل معنا" data-en="CONTACT">تواصل معنا</a>
 </div>
 <div class="navend"><button type="button" class="language" id="lang" aria-label="Change language">EN</button><button class="menu" type="button" id="menu" aria-label="Open menu" aria-expanded="false">☰</button></div>
 </nav>
@@ -169,7 +190,7 @@ nav{height:72px}.logo{font-size:24px}.menu{display:block}
 <h1 id="hero-title" dir="ltr">TIFFANY<span>.</span></h1>
 <div class="hero-lead" data-ar="مساحة للهدوء. عنوان للرقي." data-en="A quieter way to live beautifully.">مساحة للهدوء. عنوان للرقي.</div>
 <p class="hero-sub" data-ar="تجربة سكنية بطابع خاص في القطامية هايتس، حيث تلتقي التفاصيل المعمارية الأنيقة بأجواء القاهرة الجديدة الهادئة." data-en="A distinctive residential experience in Katameya Heights, where considered design meets New Cairo's tranquil surroundings.">تجربة سكنية بطابع خاص في القطامية هايتس، حيث تلتقي التفاصيل المعمارية الأنيقة بأجواء القاهرة الجديدة الهادئة.</p>
-<div class="actions"><a class="btn btn-solid" href="#project"><span data-ar="اكتشف المشروع" data-en="DISCOVER TIFFANY">اكتشف المشروع</span> <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#gallery" data-ar="شاهد التصميمات" data-en="EXPLORE THE GALLERY">شاهد التصميمات</a></div>
+<div class="actions"><a class="btn btn-solid" href="#inquiry"><span data-ar="استفسر عن المشروع" data-en="ENQUIRE ABOUT TIFFANY">استفسر عن المشروع</span> <span aria-hidden="true">↗</span></a><a class="btn btn-outline" href="#gallery" data-ar="شاهد التصميمات" data-en="EXPLORE THE GALLERY">شاهد التصميمات</a></div>
 </div>
 <div class="wrap hero-bottom"><span class="hero-index">APIC REAL ESTATE DEVELOPMENT</span><span class="hero-scroll">SCROLL TO EXPLORE</span></div>
 </section>
@@ -222,9 +243,21 @@ nav{height:72px}.logo{font-size:24px}.menu{display:block}
 <div class="apic-mark"><div>APIC<small>REAL ESTATE DEVELOPMENT</small></div></div>
 <div><div class="eyebrow">06 / THE DEVELOPER</div><h2 class="section-title" data-ar="التطوير <em>برؤية إنسانية.</em>" data-en="Development with <em>purpose.</em>">التطوير <em>برؤية إنسانية.</em></h2><p class="copy" data-ar="بحسب ملفات المشروع، تقف شركة APIC للتطوير والاستثمار العقاري وراء تيفاني فيلا. تتبنى الشركة فلسفة تهتم بالموقع والتصميم وجودة المساحات السكنية، مع التركيز على الراحة والخصوصية وتلبية احتياجات السكان." data-en="According to the project's documents, Tiffany Villa is developed by APIC Real Estate Development and Investment. The company emphasizes location, thoughtful design, construction quality and residents' comfort and privacy.">بحسب ملفات المشروع، تقف شركة APIC للتطوير والاستثمار العقاري وراء تيفاني فيلا. تتبنى الشركة فلسفة تهتم بالموقع والتصميم وجودة المساحات السكنية، مع التركيز على الراحة والخصوصية وتلبية احتياجات السكان.</p></div>
 </div></section>
+<section class="inquiry" id="inquiry" aria-labelledby="inquiry-title"><div class="wrap inquiry-grid">
+<div><div class="eyebrow">07 / GET IN TOUCH</div>
+<h2 class="section-title" id="inquiry-title" data-ar="كل بداية جميلة <em>تستحق سؤال.</em>" data-en="Every new beginning <em>starts with a conversation.</em>">كل بداية جميلة <em>تستحق سؤال.</em></h2>
+<p class="inquiry-desc" data-ar="لمعرفة التفاصيل المتاحة حاليًا عن تيفاني فيلا، تواصل مباشرة مع APIC، الشركة المطورة للمشروع، واطلب تأكيد حالة الوحدات والأسعار وشروط السداد قبل اتخاذ أي قرار." data-en="For currently available Tiffany Villa information, reach out directly to APIC, the project developer. Please confirm live availability, pricing and payment terms before making any decision.">لمعرفة التفاصيل المتاحة حاليًا عن تيفاني فيلا، تواصل مباشرة مع APIC، الشركة المطورة للمشروع، واطلب تأكيد حالة الوحدات والأسعار وشروط السداد قبل اتخاذ أي قرار.</p>
+<div class="inquiry-actions"><a class="call" href="tel:+201272750000"><span data-ar="اتصل بالشركة المطورة" data-en="CALL APIC DEVELOPMENT">اتصل بالشركة المطورة</span><span aria-hidden="true">↗</span></a>
+<a class="mail" href="mailto:info@apicdev.com?subject=Tiffany%20Villa%20Inquiry"><span data-ar="إرسال استفسار بالبريد" data-en="EMAIL THE DEVELOPER">إرسال استفسار بالبريد</span><span aria-hidden="true">✉</span></a></div>
+</div><aside class="inquiry-card"><small>APIC / CONTACT</small>
+<a class="inquiry-line" href="tel:+201272750000" dir="ltr">+20 127 275 0000</a>
+<a class="inquiry-line" href="mailto:info@apicdev.com">info@apicdev.com</a>
+<a class="inquiry-line" href="https://apicdev.com/" target="_blank" rel="noopener noreferrer">apicdev.com ↗</a>
+<p class="inquiry-note" data-ar="بيانات التواصل أعلاه منشورة على الموقع الرسمي لشركة APIC، وليست أرقامًا مخصصة أو مؤكدة لفريق مبيعات تيفاني." data-en="These are APIC's published corporate contact details, not a verified Tiffany Villa sales hotline.">بيانات التواصل أعلاه منشورة على الموقع الرسمي لشركة APIC، وليست أرقامًا مخصصة أو مؤكدة لفريق مبيعات تيفاني.</p></aside>
+</div></section>
 <section class="disclaimer"><div class="wrap"><strong data-ar="ملاحظة بشأن المعلومات والأسعار:" data-en="IMPORTANT PROJECT NOTE:">ملاحظة بشأن المعلومات والأسعار:</strong> <span data-ar="تعتمد هذه الصفحة على مواد أرشيفية من 2022–2023. الأسعار وأنظمة السداد ومواعيد التسليم وعدد الوحدات والتوافر الحالي لم يتم التحقق منها، ولذلك لم تُعرض باعتبارها عروضًا سارية. صور التصميمات تصورية وليست إثباتًا للحالة الحالية للعقار." data-en="This site is based on 2022–2023 archived project materials. Current pricing, payment terms, delivery dates, inventory and availability are unverified. The design visuals are conceptual, not evidence of current as-built conditions.">تعتمد هذه الصفحة على مواد أرشيفية من 2022–2023. الأسعار وأنظمة السداد ومواعيد التسليم وعدد الوحدات والتوافر الحالي لم يتم التحقق منها، ولذلك لم تُعرض باعتبارها عروضًا سارية. صور التصميمات تصورية وليست إثباتًا للحالة الحالية للعقار.</span></div></section>
 </main>
-<footer><div class="wrap"><div class="footer-top"><div><a class="logo" href="#home"><small>HEIGHTS VIEW</small>TIFFANY</a><p data-ar="مشروع سكني مميز في القطامية هايتس، القاهرة الجديدة. المطور: APIC للتطوير والاستثمار العقاري." data-en="A distinctive residential project in Katameya Heights, New Cairo. Developed by APIC Real Estate Development.">مشروع سكني مميز في القطامية هايتس، القاهرة الجديدة. المطور: APIC للتطوير والاستثمار العقاري.</p></div><div class="footer-nav"><a href="#project" data-ar="عن تيفاني" data-en="PROJECT">عن تيفاني</a><a href="#gallery" data-ar="معرض الصور" data-en="GALLERY">معرض الصور</a><a href="#location" data-ar="الموقع" data-en="LOCATION">الموقع</a><a href="#developer" data-ar="الشركة المطورة" data-en="DEVELOPER">الشركة المطورة</a></div></div><div class="footer-bottom"><span>© 2026 TIFFANY VILLA · APIC</span><span data-ar="محتوى تعريفي مبني على مواد المشروع المؤرشفة" data-en="AN ARCHIVAL PROJECT PRESENTATION">محتوى تعريفي مبني على مواد المشروع المؤرشفة</span></div></div></footer>
+<footer><div class="wrap"><div class="footer-top"><div><a class="logo" href="#home"><small>HEIGHTS VIEW</small>TIFFANY</a><p data-ar="مشروع سكني مميز في القطامية هايتس، القاهرة الجديدة. المطور: APIC للتطوير والاستثمار العقاري." data-en="A distinctive residential project in Katameya Heights, New Cairo. Developed by APIC Real Estate Development.">مشروع سكني مميز في القطامية هايتس، القاهرة الجديدة. المطور: APIC للتطوير والاستثمار العقاري.</p></div><div class="footer-nav"><a href="#project" data-ar="عن تيفاني" data-en="PROJECT">عن تيفاني</a><a href="#gallery" data-ar="معرض الصور" data-en="GALLERY">معرض الصور</a><a href="#location" data-ar="الموقع" data-en="LOCATION">الموقع</a><a href="#developer" data-ar="الشركة المطورة" data-en="DEVELOPER">الشركة المطورة</a><a href="#inquiry" data-ar="التواصل" data-en="CONTACT">التواصل</a></div></div><div class="footer-bottom"><span>© 2026 TIFFANY VILLA · APIC</span><span data-ar="محتوى تعريفي مبني على مواد المشروع المؤرشفة" data-en="AN ARCHIVAL PROJECT PRESENTATION">محتوى تعريفي مبني على مواد المشروع المؤرشفة</span></div></div></footer>
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة بالحجم الكبير" tabindex="-1"><button id="closeLightbox" type="button" aria-label="إغلاق">×</button><img id="lightboxImage" src="" alt="صورة من تصميمات تيفاني"><span class="lightbox-caption" id="lightboxCaption"></span></div>
 <script>
 (function(){
